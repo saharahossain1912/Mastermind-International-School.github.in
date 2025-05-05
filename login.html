@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+        .login-form {
+          max-width: 400px;
+          margin: 40px auto;
+          padding: 20px;
+          background: #071b2d;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2{
+          margin-bottom: 25px;
+          font-size: 30px;
+          text-align: center;
+          animation: animate 2s infinite alternate;
+          }
+         @keyframes animate {
+         80% {
+              color: #04044b;
+             }
+         20% {
+              color: #9b7505;
+             }
+          }
+
+        .login-form input {
+          width: 90%;
+          padding: 12px;
+          margin-bottom: 15px;
+          border-radius: 6px;
+        }
+
+        .login-form button {
+          background-color: #D4A62A;
+          color: #fff;
+          padding: 12px;
+          border: none;
+          width: 96%;
+          font-weight: bold;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Student Login Portal</h2>
+        <div class="login-form">
+        <form id="studentLoginForm">
+          <input type="text" id="studentName" placeholder="Name" required>
+          <input type="text" id="studentID" placeholder="Student ID" required>
+          <input type="password" id="studentPassword" placeholder="Password" required>
+          <button type="submit">Login</button>
+        </form>
+        </div>
+    </section>
+    <script>
+        document.getElementById("studentLoginForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+          alert("Yayy Login submitted!");
+        });
+    </script>      
+</body>
+</html>
